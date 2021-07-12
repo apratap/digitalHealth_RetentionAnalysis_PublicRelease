@@ -141,7 +141,7 @@ phendo_mdata <- get_phendo_mdata()
 #### To access Asthma dataset, will require a similar but separate Conditions for Use agreement. See the link above for more details
 #### Step 1- Obtain data access for Asthma data set here - https://www.synapse.org/#!Synapse:syn8361748
 #### Step 2 - Once the data access is obtained the following script will work to generate the copy of the data
-source('curation_scripts/curate_asthma_public.R')
+devtools::source_url('https://raw.githubusercontent.com/apratap/digitalHealth_RetentionAnalysis_PublicRelease/master/curation_scripts/curate_asthma_public.R')
 ## Running this script will generate 'Asthma_engagement.tsv' and 'Asthma_metadata.tsv'
 get_asthma_engagement_data <- function(){
   df <- fread("Asthma_engagement.tsv", data.table = F) %>%
@@ -164,7 +164,7 @@ unlink("Asthma_metadata.tsv")
 #### To access MyHeartCounts dataset, will require a similar but separate Conditions for Use agreement. See the link above for more details
 #### Step 1- Obtain data access for MyHeartCounts data set here - https://www.synapse.org/#!Synapse:syn11269541/wiki/485633
 #### Step 2 - Once the data access is obtained the following script will work to generate the copy of the data
-source('curation_scripts/curate_my_heart_counts_public.R')
+devtools::source_url('https://raw.githubusercontent.com/apratap/digitalHealth_RetentionAnalysis_PublicRelease/master/curation_scripts/curate_my_heart_counts_public.R')
 ## Running this script will generate 'MyHeartCounts_engagement.tsv' and 'MyHeartCounts_metadata.tsv'
 
 get_myHeartCounts_data <- function(){
